@@ -1,0 +1,19 @@
+$breakpoints: (
+	"phone-small": 	360px,
+	"phone":        	400px,
+   "phone-wide":   	480px,
+   "tablet-smaller": 560px,
+   "tablet-small": 	640px,
+   "tablet":       	768px,
+   "tablet-wide":  	1024px,
+   "desktop":      	1248px,
+   "desktop-wide": 	1440px
+);
+
+$lightGray: #898989;
+$pink: #db3259;
+$darkPink: #ba1d41;
+$blue: #1a506c;
+$darkBlue: #0c384e;
+
+$slow: all 0.5s ease 0s;

@@ -1,0 +1,32 @@
+.formBlock {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	min-width: 360px;
+	height: 160px;
+	padding: 33px 19px 34px 24px;
+	background-color: #1a506c;
+}
+.text {
+	color: #fff;
+	text-align: center;
+}
+.title {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 900;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+.subtitle {
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 16px;
+}
+
+@media (max-width: 1199px) {
+	.formBlock {
+		display: none;
+	}
+}

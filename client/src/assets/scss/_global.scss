@@ -1,0 +1,68 @@
+.column {
+	@include flex($direction: column);
+}
+.desc-text {
+	@include roboto-light;
+	@include font-props(13px, 24px, $lightGray);
+}
+.image-block {
+	& img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.arrow {
+	@include flex;
+	&:before, &:after {
+		@include pseudo;
+		width: 6px;
+		height: 2px;
+		background-color: #fff;
+	}
+	&:before {
+		transform: translateX(1px) rotate(-45deg);
+	}
+	&:after {
+		transform: translateX(-1px) rotate(-135deg);
+	}
+}
+
+.btn {
+	border: none;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+}
+
+.blue-btn {
+	min-width: 59px;
+	height: 35px;
+	background-color: $blue;
+	border-radius: 5px;
+	transition: $slow;
+	@include roboto-regular;	
+	@include font-props(14px, 24px, #fff);
+	&:hover {
+		background-color: $darkBlue;
+	}
+}
+
+.pink-btn {
+	min-width: 117px;
+	height: 40px;
+	background-color: $pink;
+	border-radius: 5px;
+	transition: $slow;
+	@include roboto-regular;	
+	@include font-props(14px, 20px, #fff);
+	&:hover {
+		background-color: $darkPink;
+	}
+}
+
+@media (max-width: 419px) {
+	.pink-btn {
+		min-width: 100px;
+	}
+}

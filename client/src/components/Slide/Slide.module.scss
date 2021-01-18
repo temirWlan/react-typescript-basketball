@@ -1,0 +1,13 @@
+@import '../../assets/scss/_variables.scss';
+@import '../../assets/scss/_mixins.scss';
+
+.slide {
+	@include flex($justify: center);
+	min-width: 53px;
+	height: 53px;
+	border: 1px solid #e8ecf2;
+	border-radius: 50%;
+	&:not(:first-child) {
+		margin-left: 6px;
+	}
+}

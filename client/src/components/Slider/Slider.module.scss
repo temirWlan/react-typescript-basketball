@@ -1,0 +1,52 @@
+.slider {
+	min-width: 50%;
+	max-width: 57.4%;
+}
+.contaner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 90%;
+}
+.btns {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	position: absolute;
+}
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 23px;
+	height: 23px;
+	background-color: #db3259;
+	border-radius: 50%;
+}
+
+#prev {
+	span {
+		transform: rotate(-90deg);
+	}
+}
+#next {
+	span {
+		transform: rotate(90deg);
+	}
+}
+
+@media (max-width: 991px) {
+	.slider {
+		min-width: 100%;
+		max-width: 100%;
+ 		margin-top: 20px;
+	}
+}
+

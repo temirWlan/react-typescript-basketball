@@ -1,0 +1,70 @@
+/* fonts */
+@mixin roboto-light {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+@mixin roboto-regular {
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+}
+
+@mixin roboto-bold {
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+}
+
+@mixin roboto-black {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 900;
+}
+
+@mixin font-props($size: false, $lh: false, $color: false) {
+	@if $size {
+		font-size: $size;
+	}
+	@if $lh {
+		line-height: $lh;
+	}
+	@if $color {
+		color: $color;
+	}
+}
+
+/* media */
+@mixin mq($width, $type: max) {
+	@if map_hash_key($breakpoints, $width) {
+		$width: map_get($breakpoints, $width);
+	}
+	@if $type == max {
+		$width: $width - 1px;
+	}
+	@media only screen and (#{$type}-width: $width) {
+		@content;
+	}
+}
+
+/* pseudo */
+@mixin pseudo($display: inline-block, $content: '') {
+	content: $content;
+	display: $display;
+	@content;
+}
+
+/* animation */
+@mixin hover($property, $value) {
+	#{$property}: $value;
+}
+
+/* flex */
+@mixin flex($justify: space-between, $align: center, $direction: false, $wrap: false) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+	@if $direction {
+		flex-direction: $direction;
+	}
+	@if $wrap{
+		flex-wrap: $wrap;
+	}
+}

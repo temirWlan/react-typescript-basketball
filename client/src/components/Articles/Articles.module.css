@@ -1,0 +1,10 @@
+.articles {
+	margin-top: 6px;
+	max-width: 360px;
+}
+
+@media (max-width: 1199px) {
+	.articles {
+		max-width: 100%;
+	}
+}
