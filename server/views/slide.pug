@@ -1,0 +1,12 @@
+extends layouts/main.pug
+block content
+	div(class="add-form-container")
+		form(class="add-form" action="/api/add/slide" method="POST")
+			h2(class="subtitle is-2") Slide
+			div(class="control")
+				each item in list
+					div(class="field")
+						label(class="label")= item.label
+						div(class="control")
+							input(class="input" name=item.name type="text" required)
+			button(class="button is-info is-outlined mt-3" type="submit") Add
