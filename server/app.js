@@ -1,8 +1,11 @@
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const helmet = require('helmet');
+const compression = require('compression');
 const homeRoutes = require('./routes/home');
 const articlesRoutes = require('./routes/articles');
 const cardsRoutes = require('./routes/cards');
@@ -24,6 +27,9 @@ app.set('view options', {
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cors());
+app.use(helmet());
+app.use(compression());
 app.use(express.static(path.join(__dirname, 'static')));
 
 app.use('/', homeRoutes);
